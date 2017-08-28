@@ -56,9 +56,13 @@ public class ServicoServicoImpl implements ServicoServico {
         for(int i = 0;i < pesquisa.size(); i++){
             
                 ServicoListar ul = new ServicoListar();
+                
                 ul.setId(pesquisa.get(i).getId());
-                ul.setNome(pesquisa.get(i).getNome());                
-                ul.setAtivo(pesquisa.get(i).isAtivo());                                
+               
+                ul.setNome(pesquisa.get(i).getNome());    
+                /*
+                ul.setAtivo(pesquisa.get(i).isAtivo());   
+                
                 if(pesquisa.get(i).getSolicitacao()!=null){
                     List<Long> solicitacoes = new ArrayList<Long>();
                     for(int j = 0; j < pesquisa.get(i).getSolicitacao().size(); j++){
@@ -76,6 +80,7 @@ public class ServicoServicoImpl implements ServicoServico {
                     }
                     ul.setSubservicos(subservicos);
                 }
+                */
                 retorno.add(ul);
             
             
@@ -90,10 +95,14 @@ public class ServicoServicoImpl implements ServicoServico {
         if(pesquisa==null)
             throw new ServicoInexistenteException();
         
-        ServicoListar ul = new ServicoListar();
-        ul.setId(pesquisa.getId());
-        ul.setNome(pesquisa.getNome());        
-        ul.setAtivo(pesquisa.isAtivo());                
+        ServicoListar ul = new ServicoListar();        
+        ul.setId(pesquisa.getId());       
+        ul.setNome(pesquisa.getNome());   
+        /*
+        ul.setAtivo(pesquisa.isAtivo());   
+        */
+        
+        /*
         if(pesquisa.getSolicitacao()!=null){
                     List<Long> servicos = new ArrayList<Long>();
                     for(int j = 0; j < pesquisa.getSolicitacao().size(); j++){
@@ -111,7 +120,7 @@ public class ServicoServicoImpl implements ServicoServico {
                     }
                     ul.setSubservicos(subservicos);
                 }
-                
+         */     
                 
         
         retorno.add(ul);
